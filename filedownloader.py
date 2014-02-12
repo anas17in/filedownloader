@@ -52,7 +52,7 @@ urllib2.install_opener(opener)
 f = open(file_name, 'wb')
 
 #download file chunk by chunk
-for i in range(79, no_of_chunks):
+for i in range(0, no_of_chunks):
     req.headers['Range'] = 'bytes=%s-%s' % (i*chunk_size, ((i+1)*chunk_size)-1)
     u = urllib2.urlopen(req)
     #print the content-length
